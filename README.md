@@ -92,11 +92,15 @@ This scaffold intentionally mirrors the existing repository layout:
 
 ## Planning docs
 
+- `docs/associate-objective-mapping.md`
 - `docs/aws-to-azure-mapping.md`
 - `docs/course-progression-checklist.md`
+- `docs/glossary.md`
 - `docs/implementation-notes.md`
 - `docs/miniblue-validation.md`
 - `docs/publication-status.md`
+- `docs/rubrics-and-evaluation.md`
+- `docs/syllabus-self-paced.md`
 
 ## Preview status
 
@@ -136,3 +140,17 @@ Important caveat:
 3. Build Team and Governance labs `14`-`16`
 4. Build Professional scenario labs `17`-`22`
 5. Revalidate `miniblue` support before implementing Azure service labs `23`-`25`
+
+## Preview smoke check
+
+Run the default local/CI-style smoke pass:
+
+```bash
+bash scripts/preview-smoke.sh
+```
+
+After starting `miniblue`, run the apply/destroy smoke pass for the first-publication hands-on roots:
+
+```bash
+bash scripts/preview-smoke.sh --apply-miniblue
+```

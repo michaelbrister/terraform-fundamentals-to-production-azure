@@ -66,11 +66,22 @@ Reason:
 - Advanced Azure service labs are scaffolded but not implemented.
 - Governance and professional scenario tracks are not implemented yet.
 
+## Publication support now in place
+
+- Learner-facing lab status matrix in the top-level `README.md`.
+- Self-paced preview syllabus in `docs/syllabus-self-paced.md`.
+- Azure-aware Terraform glossary in `docs/glossary.md`.
+- Associate-style objective mapping in `docs/associate-objective-mapping.md`.
+- Preview readiness rubric in `docs/rubrics-and-evaluation.md`.
+- GitHub Actions CI for Terraform formatting, validation, intentional failure checks, and the default Terratest suite.
+- Local publication smoke script in `scripts/preview-smoke.sh`.
+
 ## First publication checklist
 
+- [ ] Run `bash scripts/preview-smoke.sh`.
+- [ ] Confirm GitHub Actions CI passes on the preview branch.
 - [ ] Run `00-bootstrap` on a clean machine.
-- [ ] Apply/destroy Labs `01`-`04`.
-- [ ] Apply/destroy Lab `07`.
+- [ ] Run `bash scripts/preview-smoke.sh --apply-miniblue`.
 - [ ] Run `terraform console` examples in Lab `08`.
 - [ ] Run selected Lab `09` and Lab `10` scenarios.
 - [ ] Run default `go test` for Lab `11`.

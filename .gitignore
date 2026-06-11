@@ -6,3 +6,4 @@ crash.log
 crash.*.log
 .DS_Store
 .miniblue/
+modules/app_stack/.terraform.lock.hcl
