@@ -80,7 +80,7 @@ Quick shell-only option:
 export SSL_CERT_FILE="$HOME/.miniblue/cert.pem"
 ```
 
-On macOS, you can also trust it in your user keychain:
+On macOS, the `azurerm` provider may still use the system trust path. If Terraform reports `x509: certificate signed by unknown authority`, trust the certificate in your user keychain:
 
 ```bash
 security add-trusted-cert -d -r trustRoot \
@@ -149,7 +149,7 @@ For now, do not assume that Azure Storage remote backend labs are fully local-re
 
 ### `tls: failed to verify certificate`
 
-Trust the `miniblue` cert or export `SSL_CERT_FILE`.
+Trust the `miniblue` cert. On macOS, prefer the user keychain command above if `SSL_CERT_FILE` is not enough for Terraform.
 
 ### `connection refused` on `localhost:4567`
 

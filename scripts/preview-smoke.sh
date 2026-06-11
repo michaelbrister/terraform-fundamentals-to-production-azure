@@ -64,6 +64,10 @@ if [[ "$run_go" -eq 1 ]]; then
   require_command go
 fi
 
+if [[ "$run_apply" -eq 1 ]]; then
+  require_command curl
+fi
+
 fmt_roots=(
   "01-local-basics"
   "02-language-basics"
@@ -140,6 +144,36 @@ done
 tmp_dir="$(mktemp -d)"
 trap 'rm -rf "$tmp_dir"' EXIT
 
+cat >"$tmp_dir/03-for-each-patterns.tfvars" <<'TFVARS'
+network_stacks = {
+  smoke_app = {
+    create_nsg    = true
+    address_space = ["10.10.0.0/16"]
+    tags          = { Purpose = "smoke-app" }
+  }
+}
+TFVARS
+
+cat >"$tmp_dir/04-dynamic-patterns.tfvars" <<'TFVARS'
+security_groups = {
+  smoke_web = {
+    rules = [
+      {
+        name                       = "allow-https-in"
+        priority                   = 100
+        direction                  = "Inbound"
+        access                     = "Allow"
+        protocol                   = "Tcp"
+        source_port_range          = "*"
+        destination_port_range     = "443"
+        source_address_prefix      = "*"
+        destination_address_prefix = "*"
+      }
+    ]
+  }
+}
+TFVARS
+
 log "Checking intentional Terraform failures"
 terraform -chdir="10-breakfix/scenario-01-parse-error" validate >"$tmp_dir/parse.out" 2>&1 && {
   cat "$tmp_dir/parse.out"
@@ -168,13 +202,27 @@ if [[ "$run_apply" -eq 1 ]]; then
   log "Applying and destroying preview hands-on roots against miniblue"
   echo "This requires miniblue to be running and its certificate to be trusted."
 
+  curl -fsS http://localhost:4566/health >/dev/null
+
   for root in "${apply_roots[@]}"; do
     log "Apply/destroy: $root"
     terraform -chdir="$root" init -backend=false -input=false
-    terraform -chdir="$root" apply -auto-approve
-    terraform -chdir="$root" destroy -auto-approve
+
+    case "$root" in
+      "03-for-each-patterns")
+        terraform -chdir="$root" apply -input=false -auto-approve -var-file="$tmp_dir/03-for-each-patterns.tfvars"
+        terraform -chdir="$root" destroy -input=false -auto-approve -var-file="$tmp_dir/03-for-each-patterns.tfvars"
+        ;;
+      "04-dynamic-patterns")
+        terraform -chdir="$root" apply -input=false -auto-approve -var-file="$tmp_dir/04-dynamic-patterns.tfvars"
+        terraform -chdir="$root" destroy -input=false -auto-approve -var-file="$tmp_dir/04-dynamic-patterns.tfvars"
+        ;;
+      *)
+        terraform -chdir="$root" apply -input=false -auto-approve
+        terraform -chdir="$root" destroy -input=false -auto-approve
+        ;;
+    esac
   done
 fi
 
 log "Preview smoke checks completed"
-
