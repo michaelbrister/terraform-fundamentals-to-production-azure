@@ -107,6 +107,28 @@ Important caveat:
 - Labs `05` and `06` are concept-first because the fully local `backend "azurerm"` path is not currently proven on `miniblue`.
 - Later team, governance, professional, and Azure service extension tracks remain planned.
 
+## Lab status matrix
+
+| Lab | Status | Mode | Notes |
+| --- | --- | --- | --- |
+| `00-bootstrap` | Preview-ready | Hands-on | Install/start `miniblue`, trust certs, verify local endpoints |
+| `01-local-basics` | Preview-ready | Hands-on | Resource group + local state |
+| `02-language-basics` | Preview-ready | Hands-on | Variables, locals, outputs, tags |
+| `03-for-each-patterns` | Preview-ready | Hands-on | Stable map identity with RG/VNet/NSG examples |
+| `04-dynamic-patterns` | Preview-ready | Hands-on | Dynamic NSG `security_rule` blocks |
+| `05-backend-bootstrap` | Preview-ready | Concept-first | Azure Storage backend model; local backend path deferred |
+| `06-state-migration` | Preview-ready | Concept-first | `azurerm` backend migration workflow; local backend path deferred |
+| `07-modules` | Preview-ready | Hands-on | Shared Azure `app_stack` module |
+| `08-terraform-console` | Preview-ready | Hands-on | Console expressions; no apply required |
+| `09-refactor-state` | Preview-ready | Hands-on | Multi-step state/refactor/import lab |
+| `10-breakfix` | Preview-ready | Mixed | Includes intentional parse error and safe break/fix scenarios |
+| `11-terratest` | Preview-ready | Opt-in integration | Default test compiles/skips; `RUN_MINIBLUE_TESTS=1` applies resources |
+| `12-exam-drills` | Preview-ready | Mixed | Timed drills, including intentional provider/cycle failures |
+| `13-state-subcommands` | Preview-ready | Hands-on | State list/show/mv/rm drills |
+| `14`-`16` | Planned | Not implemented | Team and governance track |
+| `17`-`22` | Planned | Not implemented | Professional scenarios and capstone |
+| `23`-`25` | Planned | Not implemented | Azure service extension labs; require more `miniblue` validation |
+
 ## Recommended next build order
 
 1. Run the first-publication smoke checklist in `docs/publication-status.md`
