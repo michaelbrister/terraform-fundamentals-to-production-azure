@@ -49,6 +49,6 @@
 
 - [ ] Dev, stage, and prod examples are reproducible
 - [ ] Remote state works cleanly in the chosen local-first backend story
-- [ ] CI and policy checks are green
+- [ ] CI is green and policy examples are understood
 - [ ] Capstone documentation is complete
 - [ ] Learner can explain backend, auth, emulator limits, and governance choices clearly

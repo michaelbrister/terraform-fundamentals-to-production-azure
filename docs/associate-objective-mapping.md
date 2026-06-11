@@ -96,13 +96,18 @@ Learner should be able to:
 
 ## Team Workflow And Governance Concepts
 
-Preview status:
-
-- Planned for Labs `14`-`16`.
-
-Current coverage:
+Covered by:
 
 - CI introduces automated validation gates.
 - Labs `05` and `06` introduce backend and locking concepts.
-- `docs/publication-status.md` identifies the remaining parity work.
+- `14-tfc-workspaces-and-runs`
+- `15-team-rbac-and-variables`
+- `16-governance-sentinel-opa-and-approvals`
+- `policy/`
 
+Learner should be able to:
+
+- Explain workspaces, runs, speculative plans, and approval gates.
+- Describe team RBAC and variable governance.
+- Explain why secrets should be stored outside Git.
+- Map local OPA checks to Terraform Cloud Sentinel policy concepts.

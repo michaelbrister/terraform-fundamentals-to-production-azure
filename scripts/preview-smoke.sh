@@ -193,6 +193,21 @@ log "Checking provider version drill initialization"
 terraform -chdir="12-exam-drills/drill-09-provider-version-conflict" init -backend=false -input=false
 terraform -chdir="12-exam-drills/drill-09-provider-version-conflict" version
 
+if command -v conftest >/dev/null 2>&1; then
+  log "Checking optional policy examples with Conftest"
+  conftest test policy/examples/azure-plan-pass.json -p policy
+
+  conftest test policy/examples/azure-plan-fail.json -p policy >"$tmp_dir/policy-fail.out" 2>&1 && {
+    cat "$tmp_dir/policy-fail.out"
+    echo "Expected failing policy example to fail." >&2
+    exit 1
+  }
+  grep -q "missing required tag" "$tmp_dir/policy-fail.out"
+  grep -q "allows inbound traffic" "$tmp_dir/policy-fail.out"
+else
+  log "Skipping optional policy examples because conftest is not installed"
+fi
+
 if [[ "$run_go" -eq 1 ]]; then
   log "Running default Terratest suite"
   (cd "11-terratest/test" && go test -v -timeout 5m)

@@ -104,12 +104,12 @@ This scaffold intentionally mirrors the existing repository layout:
 
 ## Preview status
 
-The Azure edition now has a complete first Associate-style track from `00-bootstrap` through `13-state-subcommands`.
+The Azure edition now has a complete first Associate-style track from `00-bootstrap` through `13-state-subcommands`, plus preview-ready Team and Governance labs `14` through `16`.
 
 Important caveat:
 
 - Labs `05` and `06` are concept-first because the fully local `backend "azurerm"` path is not currently proven on `miniblue`.
-- Later team, governance, professional, and Azure service extension tracks remain planned.
+- Professional and Azure service extension tracks remain planned.
 
 ## Lab status matrix
 
@@ -129,17 +129,19 @@ Important caveat:
 | `11-terratest` | Preview-ready | Opt-in integration | Default test compiles/skips; `RUN_MINIBLUE_TESTS=1` applies resources |
 | `12-exam-drills` | Preview-ready | Mixed | Timed drills, including intentional provider/cycle failures |
 | `13-state-subcommands` | Preview-ready | Hands-on | State list/show/mv/rm drills |
-| `14`-`16` | Planned | Not implemented | Team and governance track |
+| `14-tfc-workspaces-and-runs` | Preview-ready | Concept/local | Terraform Cloud workspace/run concepts mapped to GitHub Actions and folders |
+| `15-team-rbac-and-variables` | Preview-ready | Concept/local | Team roles, Azure RBAC concepts, variable ownership, and secrets handling |
+| `16-governance-sentinel-opa-and-approvals` | Preview-ready | Concept/local | Sentinel concepts via local OPA policy examples and approval design |
 | `17`-`22` | Planned | Not implemented | Professional scenarios and capstone |
 | `23`-`25` | Planned | Not implemented | Azure service extension labs; require more `miniblue` validation |
 
 ## Recommended next build order
 
-1. Build Team and Governance labs `14`-`16`
-2. Build Professional scenario labs `17`-`22`
-3. Revalidate `miniblue` support before implementing Azure service labs `23`-`25`
-4. Add instructor-led materials after the self-paced preview stabilizes
-5. Revisit a fully local `backend "azurerm"` path if `miniblue` adds backend-compatible endpoint support
+1. Build Professional scenario labs `17`-`22`
+2. Revalidate `miniblue` support before implementing Azure service labs `23`-`25`
+3. Add instructor-led materials after the self-paced preview stabilizes
+4. Revisit a fully local `backend "azurerm"` path if `miniblue` adds backend-compatible endpoint support
+5. Consider adding optional CI policy checks after learners have completed Lab `16`
 
 ## Preview smoke check
 

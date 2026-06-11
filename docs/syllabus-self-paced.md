@@ -142,13 +142,32 @@ Checkpoint:
 
 - Predict the differences in plan output between `dev`, `stage`, and `prod`.
 
+## Week 8 - Team Workflow And Governance
+
+Labs:
+
+- `14-tfc-workspaces-and-runs`
+- `15-team-rbac-and-variables`
+- `16-governance-sentinel-opa-and-approvals`
+
+Outcomes:
+
+- Map Terraform Cloud workspaces and runs to this repo's local/GitHub workflow.
+- Explain plan/apply separation and production approvals.
+- Describe team RBAC, variable ownership, and secret handling.
+- Read OPA policy examples and explain how they map to Sentinel policy sets.
+
+Checkpoint:
+
+- Write a short governance note for `live/prod` that includes CI, policy, approval, and credential ownership.
+
 ## Preview Completion Standard
 
 A learner is preview-complete when they can:
 
 - Complete `00` through `04`, `07`, `08`, `09`, `10`, `12`, and `13`.
+- Complete concept/local governance Labs `14`, `15`, and `16`.
 - Explain the backend limitations documented in `05` and `06`.
 - Run `go test -v -timeout 5m` in `11-terratest/test`.
 - Read the CI workflow and explain which failures are intentional.
 - Describe what would need to change before using real Azure instead of `miniblue`.
-

@@ -1,0 +1,47 @@
+{
+  "format_version": "1.2",
+  "resource_changes": [
+    {
+      "address": "azurerm_resource_group.app",
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "app",
+      "change": {
+        "actions": ["create"],
+        "after": {
+          "name": "tf-course-dev-app-rg",
+          "tags": {
+            "Environment": "dev"
+          }
+        }
+      }
+    },
+    {
+      "address": "azurerm_network_security_group.app",
+      "mode": "managed",
+      "type": "azurerm_network_security_group",
+      "name": "app",
+      "change": {
+        "actions": ["create"],
+        "after": {
+          "name": "tf-course-dev-app-nsg",
+          "tags": {
+            "Environment": "dev",
+            "ManagedBy": "terraform",
+            "Stack": "tf-course"
+          },
+          "security_rule": [
+            {
+              "name": "allow-everything-in",
+              "direction": "Inbound",
+              "access": "Allow",
+              "source_address_prefix": "*",
+              "destination_port_range": "*"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+
