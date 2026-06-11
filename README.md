@@ -2,7 +2,7 @@
 
 > A planned Azure-focused companion course that mirrors the existing AWS-oriented Terraform program.
 
-**Status:** Public preview candidate
+**Status:** Public preview
 **Created:** 2026-04-12
 
 ## Goal
@@ -135,11 +135,11 @@ Important caveat:
 
 ## Recommended next build order
 
-1. Run the first-publication smoke checklist in `docs/publication-status.md`
-2. Mark the README as public preview after smoke testing
-3. Build Team and Governance labs `14`-`16`
-4. Build Professional scenario labs `17`-`22`
-5. Revalidate `miniblue` support before implementing Azure service labs `23`-`25`
+1. Build Team and Governance labs `14`-`16`
+2. Build Professional scenario labs `17`-`22`
+3. Revalidate `miniblue` support before implementing Azure service labs `23`-`25`
+4. Add instructor-led materials after the self-paced preview stabilizes
+5. Revisit a fully local `backend "azurerm"` path if `miniblue` adds backend-compatible endpoint support
 
 ## Preview smoke check
 

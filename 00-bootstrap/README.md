@@ -151,6 +151,27 @@ For now, do not assume that Azure Storage remote backend labs are fully local-re
 
 Trust the `miniblue` cert. On macOS, prefer the user keychain command above if `SSL_CERT_FILE` is not enough for Terraform.
 
+### Remove the trusted certificate when you are done
+
+If you trusted the generated certificate in your macOS user keychain, find it and remove it:
+
+```bash
+security find-certificate -a -c localhost -Z ~/Library/Keychains/login.keychain-db
+security delete-certificate -Z <SHA1_FINGERPRINT> ~/Library/Keychains/login.keychain-db
+```
+
+If the only matching `localhost` certificate is the `miniblue` certificate, this shorter command also works:
+
+```bash
+security delete-certificate -c localhost ~/Library/Keychains/login.keychain-db
+```
+
+To remove the generated local cert files too:
+
+```bash
+rm -rf ~/.miniblue
+```
+
 ### `connection refused` on `localhost:4567`
 
 `miniblue` is not running, or the HTTPS port is not exposed.
