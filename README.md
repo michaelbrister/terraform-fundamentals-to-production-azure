@@ -136,12 +136,13 @@ Important caveat:
 | `18-module-versioning-and-promotion` | Preview-ready | Concept/local | Module release notes, versioning strategy, and dev-stage-prod promotion checklist |
 | `19-multi-team-boundaries` | Preview-ready | Concept/local | Ownership matrix, state boundary design, and output contracts |
 | `20-policy-hardening` | Preview-ready | Hands-on/local | Harden OPA guardrails, run pass/fail fixtures, and write remediation guidance |
-| `21`-`22` | Planned | Not implemented | Incident recovery and capstone |
+| `21-incident-recovery` | Preview-ready | Concept/local | Drift, lock, state, import, and incident report recovery drills |
+| `22-capstone` | Planned | Not implemented | Final capstone |
 | `23`-`25` | Planned | Not implemented | Azure service extension labs; require more `miniblue` validation |
 
 ## Recommended next build order
 
-1. Build Professional scenario labs `21`-`22`
+1. Build Professional scenario lab `22`
 2. Revalidate `miniblue` support before implementing Azure service labs `23`-`25`
 3. Add instructor-led materials after the self-paced preview stabilizes
 4. Revisit a fully local `backend "azurerm"` path if `miniblue` adds backend-compatible endpoint support

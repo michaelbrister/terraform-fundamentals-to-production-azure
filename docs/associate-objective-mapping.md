@@ -90,6 +90,7 @@ Covered by:
 - `18-module-versioning-and-promotion`
 - `19-multi-team-boundaries`
 - `20-policy-hardening`
+- `21-incident-recovery`
 
 Learner should be able to:
 
@@ -101,6 +102,7 @@ Learner should be able to:
 - Explain safe module promotion and why production module consumers should pin releases.
 - Explain state boundaries, output contracts, and ownership separation across teams.
 - Explain policy hardening, remediation guidance, and phased rollout.
+- Explain incident recovery steps for drift, locks, state inspection, and imports.
 
 ## Team Workflow And Governance Concepts
 
