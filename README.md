@@ -149,8 +149,8 @@ Important caveat:
 
 ## Recommended next build order
 
-1. Add optional real-Azure appendices for service labs once the local-first path is stable
-2. Pilot the learner walkthrough and instructor guide with a small cohort
+1. Pilot the learner walkthrough and instructor guide with a small cohort
+2. Validate end-to-end Event Grid subscription and Function delivery when emulator or real-Azure testing is available
 3. Revisit a fully local `backend "azurerm"` path if `miniblue` adds backend-compatible endpoint support
 
 ## Preview smoke check

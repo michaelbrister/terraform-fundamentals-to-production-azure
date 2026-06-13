@@ -128,5 +128,5 @@ Reason:
 To reach full parity with the AWS course, still harden:
 
 - end-to-end Event Grid subscription and Function delivery validation
-- real-Azure appendices for service labs
-- instructor-led materials
+- learner walkthrough and instructor-guide pilot feedback
+- fully local `backend "azurerm"` support if `miniblue` adds backend-compatible endpoint behavior
