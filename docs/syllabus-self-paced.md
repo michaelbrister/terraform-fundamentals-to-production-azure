@@ -167,6 +167,7 @@ Labs:
 
 - `17-import-and-adopt`
 - `18-module-versioning-and-promotion`
+- `19-multi-team-boundaries`
 
 Outcomes:
 
@@ -176,11 +177,13 @@ Outcomes:
 - Explain the difference between import, drift correction, and recreation.
 - Write module release notes and classify module changes.
 - Design a dev to stage to prod promotion path.
+- Design team ownership boundaries, output contracts, and state separation.
 
 Checkpoint:
 
 - Produce a clean post-import plan and write the import commands used.
 - Write a promotion packet for a hypothetical `modules/app_stack` release.
+- Write an ownership matrix for platform, app, and security teams.
 
 ## Preview Completion Standard
 
@@ -188,7 +191,7 @@ A learner is preview-complete when they can:
 
 - Complete `00` through `04`, `07`, `08`, `09`, `10`, `12`, and `13`.
 - Complete concept/local governance Labs `14`, `15`, and `16`.
-- Complete professional Labs `17` and `18`.
+- Complete professional Labs `17`, `18`, and `19`.
 - Explain the backend limitations documented in `05` and `06`.
 - Run `go test -v -timeout 5m` in `11-terratest/test`.
 - Read the CI workflow and explain which failures are intentional.

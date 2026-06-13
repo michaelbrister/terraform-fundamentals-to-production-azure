@@ -134,12 +134,13 @@ Important caveat:
 | `16-governance-sentinel-opa-and-approvals` | Preview-ready | Concept/local | Sentinel concepts via local OPA policy examples and approval design |
 | `17-import-and-adopt` | Preview-ready | Hands-on | Import an existing resource group into Terraform without recreation |
 | `18-module-versioning-and-promotion` | Preview-ready | Concept/local | Module release notes, versioning strategy, and dev-stage-prod promotion checklist |
-| `19`-`22` | Planned | Not implemented | Professional scenarios and capstone |
+| `19-multi-team-boundaries` | Preview-ready | Concept/local | Ownership matrix, state boundary design, and output contracts |
+| `20`-`22` | Planned | Not implemented | Professional scenarios and capstone |
 | `23`-`25` | Planned | Not implemented | Azure service extension labs; require more `miniblue` validation |
 
 ## Recommended next build order
 
-1. Build Professional scenario labs `19`-`22`
+1. Build Professional scenario labs `20`-`22`
 2. Revalidate `miniblue` support before implementing Azure service labs `23`-`25`
 3. Add instructor-led materials after the self-paced preview stabilizes
 4. Revisit a fully local `backend "azurerm"` path if `miniblue` adds backend-compatible endpoint support

@@ -29,6 +29,7 @@ The preview covers:
 - `16-governance-sentinel-opa-and-approvals`
 - `17-import-and-adopt`
 - `18-module-versioning-and-promotion`
+- `19-multi-team-boundaries`
 - `live/dev`, `live/stage`, `live/prod`
 - `modules/app_stack`
 - `policy/`
@@ -64,6 +65,7 @@ These are intentionally concept-first in the Azure preview:
 - `15-team-rbac-and-variables`
 - `16-governance-sentinel-opa-and-approvals`
 - `18-module-versioning-and-promotion`
+- `19-multi-team-boundaries`
 
 Reason:
 
@@ -71,6 +73,7 @@ Reason:
 - `miniblue` currently exposes local emulator endpoints that are not a drop-in target for that backend path.
 - Team and governance labs are intentionally local-first so learners can understand workflows before creating Terraform Cloud or Azure accounts.
 - Lab `18` is intentionally concept/local because real module version pinning requires a registry or Git source ref outside this local tutorial repo.
+- Lab `19` is intentionally concept/local because real multi-team boundaries depend on separate backends, credentials, and review paths.
 
 ## Known limitations
 
@@ -78,7 +81,7 @@ Reason:
 - No full end-to-end apply sweep has been run across every lab in this workspace.
 - The first-publication apply/destroy smoke sweep has passed for Labs `01`, `02`, `03`, `04`, `07`, and `13` against local `miniblue`.
 - Advanced Azure service labs are scaffolded but not implemented.
-- Professional scenario labs `19`-`22` are not implemented yet.
+- Professional scenario labs `20`-`22` are not implemented yet.
 - Team and Governance labs are concept/local preview labs rather than Terraform Cloud-backed labs.
 
 ## Publication support now in place
@@ -108,7 +111,6 @@ Reason:
 
 To reach parity with the AWS course, still build:
 
-- `19-multi-team-boundaries`
 - `20-policy-hardening`
 - `21-incident-recovery`
 - `22-capstone`

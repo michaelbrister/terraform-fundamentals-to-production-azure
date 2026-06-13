@@ -88,6 +88,7 @@ Covered by:
 - `12-exam-drills`
 - `17-import-and-adopt`
 - `18-module-versioning-and-promotion`
+- `19-multi-team-boundaries`
 
 Learner should be able to:
 
@@ -97,6 +98,7 @@ Learner should be able to:
 - Read a test failure without panic spiraling into random edits.
 - Import existing infrastructure and converge configuration without recreation.
 - Explain safe module promotion and why production module consumers should pin releases.
+- Explain state boundaries, output contracts, and ownership separation across teams.
 
 ## Team Workflow And Governance Concepts
 
