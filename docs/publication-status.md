@@ -33,6 +33,7 @@ The preview covers:
 - `20-policy-hardening`
 - `21-incident-recovery`
 - `22-capstone`
+- `23-http-api-and-function-app`
 - `live/dev`, `live/stage`, `live/prod`
 - `modules/app_stack`
 - `policy/`
@@ -72,6 +73,7 @@ These are intentionally concept-first in the Azure preview:
 - `16-governance-sentinel-opa-and-approvals`
 - `18-module-versioning-and-promotion`
 - `19-multi-team-boundaries`
+- `23-http-api-and-function-app`
 
 Reason:
 
@@ -80,13 +82,14 @@ Reason:
 - Team and governance labs are intentionally local-first so learners can understand workflows before creating Terraform Cloud or Azure accounts.
 - Lab `18` is intentionally concept/local because real module version pinning requires a registry or Git source ref outside this local tutorial repo.
 - Lab `19` is intentionally concept/local because real multi-team boundaries depend on separate backends, credentials, and review paths.
+- Lab `23` is intentionally concept/CLI-first because the local Function App control plane validates through `azlocal`, but the full Terraform Function App runtime path is not yet proven.
 
 ## Known limitations
 
 - No fully local `backend "azurerm"` migration lab yet.
 - No full end-to-end apply sweep has been run across every lab in this workspace.
 - The first-publication apply/destroy smoke sweep has passed for Labs `01`, `02`, `03`, `04`, `07`, and `13` against local `miniblue`.
-- Advanced Azure service labs are scaffolded but not implemented.
+- Advanced Azure service labs are partially implemented; Lab `23` is preview-ready, while Labs `24` and `25` remain planned.
 - Professional scenario track `17`-`22` is preview-ready.
 - Team and Governance labs are concept/local preview labs rather than Terraform Cloud-backed labs.
 
@@ -117,6 +120,5 @@ Reason:
 
 To reach parity with the AWS course, still build:
 
-- `23-http-api-and-function-app`
 - `24-entra-auth`
 - `25-event-grid-to-function`

@@ -194,6 +194,23 @@ Checkpoint:
 - Complete an incident report and recovery checklist.
 - Submit the capstone checklist, architecture brief, and evaluation artifacts.
 
+## Week 10 - Azure Service Extension
+
+Lab:
+
+- `23-http-api-and-function-app`
+
+Outcomes:
+
+- Explain the difference between a Function App resource and a deployed function.
+- Use `azlocal` to create and inspect a local Function App control-plane resource.
+- Design a small HTTP-triggered API boundary.
+- Identify which Function App dependencies require more validation before becoming Terraform hands-on.
+
+Checkpoint:
+
+- Complete the HTTP API design packet and explain why the local lab is concept/CLI-first rather than Terraform apply-driven.
+
 ## Preview Completion Standard
 
 A learner is preview-complete when they can:
@@ -201,6 +218,7 @@ A learner is preview-complete when they can:
 - Complete `00` through `04`, `07`, `08`, `09`, `10`, `12`, and `13`.
 - Complete concept/local governance Labs `14`, `15`, and `16`.
 - Complete professional Labs `17` through `22`.
+- Complete service extension Lab `23`.
 - Explain the backend limitations documented in `05` and `06`.
 - Run `go test -v -timeout 5m` in `11-terratest/test`.
 - Read the CI workflow and explain which failures are intentional.
