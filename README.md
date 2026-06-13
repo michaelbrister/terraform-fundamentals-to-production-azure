@@ -140,15 +140,15 @@ Important caveat:
 | `21-incident-recovery` | Preview-ready | Concept/local | Drift, lock, state, import, and incident report recovery drills |
 | `22-capstone` | Preview-ready | Capstone | Final architecture, governance, CI, promotion, and recovery deliverables |
 | `23-http-api-and-function-app` | Preview-ready | Concept/CLI | Local Function App control-plane probe plus HTTP API design packet |
-| `24`-`25` | Planned | Not implemented | Entra/auth and Event Grid delivery labs; Event Grid topic Terraform path is validated, but end-to-end delivery still needs validation |
+| `24-entra-auth` | Preview-ready | Concept | Entra identity, RBAC, app auth, and real-Azure design packet |
+| `25-event-grid-to-function` | Planned | Not implemented | Event Grid topic Terraform path is validated, but end-to-end delivery still needs validation |
 
 ## Recommended next build order
 
-1. Draft Lab `24` as a concept-first Entra/Auth lab because local AD/identity commands are not exposed by `miniblue`
-2. Draft Lab `25` around Terraform-validated Event Grid topic creation, then keep event subscription and delivery as a validation checkpoint
-3. Add optional real-Azure appendices for service labs once the local-first path is stable
-4. Add instructor-led materials after the self-paced preview stabilizes
-5. Revisit a fully local `backend "azurerm"` path if `miniblue` adds backend-compatible endpoint support
+1. Draft Lab `25` around Terraform-validated Event Grid topic creation, then keep event subscription and delivery as a validation checkpoint
+2. Add optional real-Azure appendices for service labs once the local-first path is stable
+3. Expand instructor-led materials after the self-paced preview stabilizes
+4. Revisit a fully local `backend "azurerm"` path if `miniblue` adds backend-compatible endpoint support
 
 ## Preview smoke check
 

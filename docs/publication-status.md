@@ -34,6 +34,7 @@ The preview covers:
 - `21-incident-recovery`
 - `22-capstone`
 - `23-http-api-and-function-app`
+- `24-entra-auth`
 - `live/dev`, `live/stage`, `live/prod`
 - `modules/app_stack`
 - `policy/`
@@ -74,6 +75,7 @@ These are intentionally concept-first in the Azure preview:
 - `18-module-versioning-and-promotion`
 - `19-multi-team-boundaries`
 - `23-http-api-and-function-app`
+- `24-entra-auth`
 
 Reason:
 
@@ -83,13 +85,14 @@ Reason:
 - Lab `18` is intentionally concept/local because real module version pinning requires a registry or Git source ref outside this local tutorial repo.
 - Lab `19` is intentionally concept/local because real multi-team boundaries depend on separate backends, credentials, and review paths.
 - Lab `23` is intentionally concept/CLI-first because the local Function App control plane validates through `azlocal`, but the full Terraform Function App runtime path is not yet proven.
+- Lab `24` is intentionally concept-first because local Entra app registration, service principal, managed identity, and RBAC flows are not exposed by `miniblue`.
 
 ## Known limitations
 
 - No fully local `backend "azurerm"` migration lab yet.
 - No full end-to-end apply sweep has been run across every lab in this workspace.
 - The first-publication apply/destroy smoke sweep has passed for Labs `01`, `02`, `03`, `04`, `07`, and `13` against local `miniblue`.
-- Advanced Azure service labs are partially implemented; Lab `23` is preview-ready, while Labs `24` and `25` remain planned.
+- Advanced Azure service labs are partially implemented; Labs `23` and `24` are preview-ready, while Lab `25` remains planned.
 - Professional scenario track `17`-`22` is preview-ready.
 - Team and Governance labs are concept/local preview labs rather than Terraform Cloud-backed labs.
 
@@ -120,5 +123,4 @@ Reason:
 
 To reach parity with the AWS course, still build:
 
-- `24-entra-auth`
 - `25-event-grid-to-function`

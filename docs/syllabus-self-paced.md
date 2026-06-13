@@ -196,9 +196,10 @@ Checkpoint:
 
 ## Week 10 - Azure Service Extension
 
-Lab:
+Labs:
 
 - `23-http-api-and-function-app`
+- `24-entra-auth`
 
 Outcomes:
 
@@ -206,10 +207,13 @@ Outcomes:
 - Use `azlocal` to create and inspect a local Function App control-plane resource.
 - Design a small HTTP-triggered API boundary.
 - Identify which Function App dependencies require more validation before becoming Terraform hands-on.
+- Design an Entra auth model for the API without requiring a real Azure tenant.
+- Separate human, CI, Terraform, runtime, and caller identities.
+- Explain how app registrations, service principals, managed identities, and RBAC fit together.
 
 Checkpoint:
 
-- Complete the HTTP API design packet and explain why the local lab is concept/CLI-first rather than Terraform apply-driven.
+- Complete the HTTP API and auth design packets, then explain which parts are locally validated and which require real Azure.
 
 ## Preview Completion Standard
 
@@ -218,7 +222,7 @@ A learner is preview-complete when they can:
 - Complete `00` through `04`, `07`, `08`, `09`, `10`, `12`, and `13`.
 - Complete concept/local governance Labs `14`, `15`, and `16`.
 - Complete professional Labs `17` through `22`.
-- Complete service extension Lab `23`.
+- Complete service extension Labs `23` and `24`.
 - Explain the backend limitations documented in `05` and `06`.
 - Run `go test -v -timeout 5m` in `11-terratest/test`.
 - Read the CI workflow and explain which failures are intentional.
