@@ -206,6 +206,15 @@ if command -v conftest >/dev/null 2>&1; then
   }
   grep -q "missing required tag" "$tmp_dir/policy-fail.out"
   grep -q "allows inbound traffic" "$tmp_dir/policy-fail.out"
+
+  conftest test policy/examples/azure-plan-hardening-fail.json -p policy >"$tmp_dir/policy-hardening-fail.out" 2>&1 && {
+    cat "$tmp_dir/policy-hardening-fail.out"
+    echo "Expected hardened policy example to fail." >&2
+    exit 1
+  }
+  grep -q "invalid Environment tag" "$tmp_dir/policy-hardening-fail.out"
+  grep -q "wildcard source" "$tmp_dir/policy-hardening-fail.out"
+  grep -q "all ports" "$tmp_dir/policy-hardening-fail.out"
 else
   log "Skipping optional policy examples because conftest is not installed"
 fi

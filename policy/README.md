@@ -32,12 +32,21 @@ For Azure resources that support tags, the policy requires:
 
 - `Environment`
 - `ManagedBy`
+- `Name`
 - `Stack`
+
+The `Environment` tag must be one of:
+
+- `dev`
+- `stage`
+- `prod`
 
 For network security group rules, the policy blocks inbound `Allow` rules where both of these are true:
 
 - source is `*`
 - destination port is `*`
+
+The hardened rules also block either risky condition independently for new or updated NSG rules.
 
 ## Why this is not Sentinel
 
@@ -47,4 +56,3 @@ Sentinel is the Terraform Cloud policy engine. OPA is used here because it works
 2. run policy checks
 3. read failures
 4. fix configuration instead of bypassing guardrails
-

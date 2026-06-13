@@ -2,36 +2,46 @@
   "format_version": "1.2",
   "resource_changes": [
     {
-      "address": "azurerm_resource_group.app",
+      "address": "azurerm_resource_group.sandbox",
       "mode": "managed",
       "type": "azurerm_resource_group",
-      "name": "app",
+      "name": "sandbox",
       "change": {
         "actions": ["create"],
         "after": {
-          "name": "tf-course-dev-app-rg",
+          "name": "tf-course-sandbox-rg",
           "tags": {
-            "Environment": "dev"
+            "Environment": "sandbox",
+            "ManagedBy": "terraform",
+            "Stack": "tf-course",
+            "Name": "sandbox"
           }
         }
       }
     },
     {
-      "address": "azurerm_network_security_group.app",
+      "address": "azurerm_network_security_group.admin",
       "mode": "managed",
       "type": "azurerm_network_security_group",
-      "name": "app",
+      "name": "admin",
       "change": {
         "actions": ["create"],
         "after": {
-          "name": "tf-course-dev-app-nsg",
+          "name": "tf-course-prod-admin-nsg",
           "tags": {
-            "Environment": "dev",
-            "Name": "app",
+            "Environment": "prod",
             "ManagedBy": "terraform",
-            "Stack": "tf-course"
+            "Stack": "tf-course",
+            "Name": "admin"
           },
           "security_rule": [
+            {
+              "name": "allow-admin-in",
+              "direction": "Inbound",
+              "access": "Allow",
+              "source_address_prefix": "*",
+              "destination_port_range": "22"
+            },
             {
               "name": "allow-everything-in",
               "direction": "Inbound",
@@ -45,3 +55,4 @@
     }
   ]
 }
+

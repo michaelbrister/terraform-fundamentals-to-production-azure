@@ -89,6 +89,7 @@ Covered by:
 - `17-import-and-adopt`
 - `18-module-versioning-and-promotion`
 - `19-multi-team-boundaries`
+- `20-policy-hardening`
 
 Learner should be able to:
 
@@ -99,6 +100,7 @@ Learner should be able to:
 - Import existing infrastructure and converge configuration without recreation.
 - Explain safe module promotion and why production module consumers should pin releases.
 - Explain state boundaries, output contracts, and ownership separation across teams.
+- Explain policy hardening, remediation guidance, and phased rollout.
 
 ## Team Workflow And Governance Concepts
 
