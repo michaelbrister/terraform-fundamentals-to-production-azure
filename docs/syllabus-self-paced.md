@@ -161,12 +161,30 @@ Checkpoint:
 
 - Write a short governance note for `live/prod` that includes CI, policy, approval, and credential ownership.
 
+## Week 9 - Professional Adoption Scenario
+
+Lab:
+
+- `17-import-and-adopt`
+
+Outcomes:
+
+- Create local Azure-style resources outside Terraform.
+- Import existing resources into Terraform state.
+- Converge configuration without replacement.
+- Explain the difference between import, drift correction, and recreation.
+
+Checkpoint:
+
+- Produce a clean post-import plan and write the import commands used.
+
 ## Preview Completion Standard
 
 A learner is preview-complete when they can:
 
 - Complete `00` through `04`, `07`, `08`, `09`, `10`, `12`, and `13`.
 - Complete concept/local governance Labs `14`, `15`, and `16`.
+- Complete professional adoption Lab `17`.
 - Explain the backend limitations documented in `05` and `06`.
 - Run `go test -v -timeout 5m` in `11-terratest/test`.
 - Read the CI workflow and explain which failures are intentional.

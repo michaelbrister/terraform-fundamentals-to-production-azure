@@ -27,6 +27,7 @@ The preview covers:
 - `14-tfc-workspaces-and-runs`
 - `15-team-rbac-and-variables`
 - `16-governance-sentinel-opa-and-approvals`
+- `17-import-and-adopt`
 - `live/dev`, `live/stage`, `live/prod`
 - `modules/app_stack`
 - `policy/`
@@ -47,6 +48,7 @@ These are intended to be runnable against `miniblue`:
 - `11-terratest`
 - `12-exam-drills`
 - `13-state-subcommands`
+- `17-import-and-adopt`
 - `live/*`
 
 Some labs contain intentionally broken Terraform as part of the exercise.
@@ -73,7 +75,7 @@ Reason:
 - No full end-to-end apply sweep has been run across every lab in this workspace.
 - The first-publication apply/destroy smoke sweep has passed for Labs `01`, `02`, `03`, `04`, `07`, and `13` against local `miniblue`.
 - Advanced Azure service labs are scaffolded but not implemented.
-- Professional scenario tracks are not implemented yet.
+- Professional scenario labs `18`-`22` are not implemented yet.
 - Team and Governance labs are concept/local preview labs rather than Terraform Cloud-backed labs.
 
 ## Publication support now in place
@@ -103,7 +105,6 @@ Reason:
 
 To reach parity with the AWS course, still build:
 
-- `17-import-and-adopt`
 - `18-module-versioning-and-promotion`
 - `19-multi-team-boundaries`
 - `20-policy-hardening`

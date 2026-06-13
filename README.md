@@ -132,12 +132,13 @@ Important caveat:
 | `14-tfc-workspaces-and-runs` | Preview-ready | Concept/local | Terraform Cloud workspace/run concepts mapped to GitHub Actions and folders |
 | `15-team-rbac-and-variables` | Preview-ready | Concept/local | Team roles, Azure RBAC concepts, variable ownership, and secrets handling |
 | `16-governance-sentinel-opa-and-approvals` | Preview-ready | Concept/local | Sentinel concepts via local OPA policy examples and approval design |
-| `17`-`22` | Planned | Not implemented | Professional scenarios and capstone |
+| `17-import-and-adopt` | Preview-ready | Hands-on | Import an existing resource group into Terraform without recreation |
+| `18`-`22` | Planned | Not implemented | Professional scenarios and capstone |
 | `23`-`25` | Planned | Not implemented | Azure service extension labs; require more `miniblue` validation |
 
 ## Recommended next build order
 
-1. Build Professional scenario labs `17`-`22`
+1. Build Professional scenario labs `18`-`22`
 2. Revalidate `miniblue` support before implementing Azure service labs `23`-`25`
 3. Add instructor-led materials after the self-paced preview stabilizes
 4. Revisit a fully local `backend "azurerm"` path if `miniblue` adds backend-compatible endpoint support

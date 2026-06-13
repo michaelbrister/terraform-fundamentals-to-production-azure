@@ -86,6 +86,7 @@ Covered by:
 - `10-breakfix`
 - `11-terratest`
 - `12-exam-drills`
+- `17-import-and-adopt`
 
 Learner should be able to:
 
@@ -93,6 +94,7 @@ Learner should be able to:
 - Recognize identity instability from unsafe keys.
 - Explain drift and import-vs-recreate choices.
 - Read a test failure without panic spiraling into random edits.
+- Import existing infrastructure and converge configuration without recreation.
 
 ## Team Workflow And Governance Concepts
 
