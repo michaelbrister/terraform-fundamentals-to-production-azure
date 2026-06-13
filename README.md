@@ -141,14 +141,13 @@ Important caveat:
 | `22-capstone` | Preview-ready | Capstone | Final architecture, governance, CI, promotion, and recovery deliverables |
 | `23-http-api-and-function-app` | Preview-ready | Concept/CLI | Local Function App control-plane probe plus HTTP API design packet |
 | `24-entra-auth` | Preview-ready | Concept | Entra identity, RBAC, app auth, and real-Azure design packet |
-| `25-event-grid-to-function` | Planned | Not implemented | Event Grid topic Terraform path is validated, but end-to-end delivery still needs validation |
+| `25-event-grid-to-function` | Preview-ready | Mixed | Terraform-validated Event Grid topic plus design-first Function delivery packet |
 
 ## Recommended next build order
 
-1. Draft Lab `25` around Terraform-validated Event Grid topic creation, then keep event subscription and delivery as a validation checkpoint
-2. Add optional real-Azure appendices for service labs once the local-first path is stable
-3. Expand instructor-led materials after the self-paced preview stabilizes
-4. Revisit a fully local `backend "azurerm"` path if `miniblue` adds backend-compatible endpoint support
+1. Add optional real-Azure appendices for service labs once the local-first path is stable
+2. Expand instructor-led materials after the self-paced preview stabilizes
+3. Revisit a fully local `backend "azurerm"` path if `miniblue` adds backend-compatible endpoint support
 
 ## Preview smoke check
 

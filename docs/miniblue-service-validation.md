@@ -26,7 +26,7 @@ The decision rule:
 | Function App | `azlocal functionapp create/list` works | Not yet validated through `azurerm_linux_function_app` or related resources | Lab `23` should be concept/CLI-first unless Terraform path validates |
 | Event Grid topic | `azlocal eventgrid topic create/list` works | `azurerm_eventgrid_topic` apply/destroy passed in `validation/miniblue/services/eventgrid-topic` | Safe hands-on for topic creation |
 | Entra/auth | No `azlocal ad` or `azlocal identity` command exposed; health lists `identity` only | Not validated | Lab `24` should be concept-first |
-| Event Grid to Function | Component create paths exist separately | End-to-end subscription/delivery not validated | Lab `25` should wait for focused validation |
+| Event Grid to Function | Component create paths exist separately | Event Grid topic is Terraform-validated; end-to-end subscription/delivery is not validated | Lab `25` can be mixed: topic hands-on, delivery design-first |
 
 ## Commands Used
 
@@ -116,7 +116,7 @@ Reason:
 
 - Event Grid topic creation works through `azlocal` and Terraform
 - Function App creation works through `azlocal`
-- event subscription and event delivery still need validation before the full end-to-end lab can be hands-on
+- event subscription and event delivery still need validation before the full end-to-end flow can be hands-on
 
 ## Validation Roots
 

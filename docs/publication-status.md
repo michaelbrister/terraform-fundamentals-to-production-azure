@@ -35,6 +35,7 @@ The preview covers:
 - `22-capstone`
 - `23-http-api-and-function-app`
 - `24-entra-auth`
+- `25-event-grid-to-function`
 - `live/dev`, `live/stage`, `live/prod`
 - `modules/app_stack`
 - `policy/`
@@ -92,7 +93,8 @@ Reason:
 - No fully local `backend "azurerm"` migration lab yet.
 - No full end-to-end apply sweep has been run across every lab in this workspace.
 - The first-publication apply/destroy smoke sweep has passed for Labs `01`, `02`, `03`, `04`, `07`, and `13` against local `miniblue`.
-- Advanced Azure service labs are partially implemented; Labs `23` and `24` are preview-ready, while Lab `25` remains planned.
+- Advanced Azure service labs `23` through `25` are preview-ready.
+- Lab `25` is mixed: Event Grid topic creation is Terraform-validated, while end-to-end Function delivery remains a documented validation boundary.
 - Professional scenario track `17`-`22` is preview-ready.
 - Team and Governance labs are concept/local preview labs rather than Terraform Cloud-backed labs.
 
@@ -121,6 +123,8 @@ Reason:
 
 ## Full parity requirements
 
-To reach parity with the AWS course, still build:
+To reach full parity with the AWS course, still harden:
 
-- `25-event-grid-to-function`
+- end-to-end Event Grid subscription and Function delivery validation
+- real-Azure appendices for service labs
+- instructor-led materials
