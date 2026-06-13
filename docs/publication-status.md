@@ -102,6 +102,7 @@ Reason:
 
 - Learner-facing lab status matrix in the top-level `README.md`.
 - Manual learner walkthrough checklist in `docs/learner-walkthrough-checklist.md`.
+- Instructor guide and agenda template in `docs/instructor-guide.md` and `docs/instructor-delivery-plan.md`.
 - Self-paced preview syllabus in `docs/syllabus-self-paced.md`.
 - Real Azure appendix index in `docs/real-azure-appendices.md`.
 - Azure-aware Terraform glossary in `docs/glossary.md`.

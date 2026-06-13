@@ -73,8 +73,8 @@ Current preview decision:
 The highest-value next step is:
 
 1. run a learner walkthrough of selected hands-on labs
-2. add optional real-Azure appendices where local emulation is intentionally incomplete
-3. expand instructor-led materials after the self-paced preview stabilizes
+2. pilot the instructor guide with a small cohort
+3. collect issues from `docs/learner-walkthrough-checklist.md`
 4. revisit `backend "azurerm"` if `miniblue` adds backend-compatible endpoint support
 
 ## Current decision for Labs 05 and 06

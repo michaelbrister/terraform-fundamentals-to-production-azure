@@ -97,6 +97,8 @@ This scaffold intentionally mirrors the existing repository layout:
 - `docs/course-progression-checklist.md`
 - `docs/glossary.md`
 - `docs/implementation-notes.md`
+- `docs/instructor-delivery-plan.md`
+- `docs/instructor-guide.md`
 - `docs/learner-walkthrough-checklist.md`
 - `docs/miniblue-validation.md`
 - `docs/miniblue-service-validation.md`
@@ -148,7 +150,7 @@ Important caveat:
 ## Recommended next build order
 
 1. Add optional real-Azure appendices for service labs once the local-first path is stable
-2. Expand instructor-led materials after the self-paced preview stabilizes
+2. Pilot the learner walkthrough and instructor guide with a small cohort
 3. Revisit a fully local `backend "azurerm"` path if `miniblue` adds backend-compatible endpoint support
 
 ## Preview smoke check
