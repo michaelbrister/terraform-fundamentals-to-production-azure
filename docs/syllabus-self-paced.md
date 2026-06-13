@@ -14,6 +14,7 @@ Do:
 - Complete `00-bootstrap`.
 - Confirm Terraform can talk to local `miniblue`.
 - Read `docs/miniblue-validation.md`.
+- Skim `docs/real-azure-appendices.md` so you know which parts are optional real-Azure extensions.
 
 Outcomes:
 

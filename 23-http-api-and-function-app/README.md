@@ -151,6 +151,8 @@ Define:
 
 Keep the design intentionally small. The goal is to model the service boundary, not build a complete application platform.
 
+If your team is ready to validate this outside `miniblue`, complete `REAL_AZURE_APPENDIX.template.md` before creating resources in a real Azure subscription.
+
 ## Step 6 - Sketch The Terraform Shape
 
 Write a short Terraform design note. Do not apply it locally yet.
@@ -197,9 +199,11 @@ Create a lab packet with:
 
 - completed `HTTP_API_DESIGN.template.md`
 - completed `COMMAND_LOG.template.md`
+- completed `REAL_AZURE_APPENDIX.template.md` if running against real Azure
 - a short Terraform resource sketch
 - a paragraph explaining why this lab is not yet Terraform hands-on
-- a real-Azure appendix listing what would change outside `miniblue`
+
+For the broader real-Azure service-extension path, see `docs/real-azure-appendices.md`.
 
 ## Success criteria
 

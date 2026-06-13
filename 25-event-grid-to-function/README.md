@@ -204,6 +204,8 @@ Create an event-driven design packet with:
 - a paragraph explaining the local validation boundary
 - a real-Azure appendix for production delivery validation
 
+For the broader real-Azure service-extension path, see `docs/real-azure-appendices.md`.
+
 ## Success criteria
 
 You are done when you can explain:

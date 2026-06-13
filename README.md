@@ -101,6 +101,7 @@ This scaffold intentionally mirrors the existing repository layout:
 - `docs/miniblue-validation.md`
 - `docs/miniblue-service-validation.md`
 - `docs/publication-status.md`
+- `docs/real-azure-appendices.md`
 - `docs/rubrics-and-evaluation.md`
 - `docs/syllabus-self-paced.md`
 

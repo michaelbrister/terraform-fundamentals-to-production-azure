@@ -195,6 +195,8 @@ Document what a team must do before running this against real Azure:
 - audit trail
 - rollback plan
 
+For the broader real-Azure service-extension path, see `docs/real-azure-appendices.md`.
+
 ## Deliverable
 
 Create an auth design packet with:
