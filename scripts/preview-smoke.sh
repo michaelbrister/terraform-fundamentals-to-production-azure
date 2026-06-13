@@ -94,6 +94,7 @@ fmt_roots=(
   "live/stage"
   "live/prod"
   "modules/app_stack"
+  "validation/miniblue/services/eventgrid-topic"
 )
 
 validate_roots=(
@@ -121,6 +122,7 @@ validate_roots=(
   "live/stage"
   "live/prod"
   "modules/app_stack"
+  "validation/miniblue/services/eventgrid-topic"
 )
 
 apply_roots=(

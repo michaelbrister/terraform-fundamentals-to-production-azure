@@ -98,6 +98,7 @@ This scaffold intentionally mirrors the existing repository layout:
 - `docs/glossary.md`
 - `docs/implementation-notes.md`
 - `docs/miniblue-validation.md`
+- `docs/miniblue-service-validation.md`
 - `docs/publication-status.md`
 - `docs/rubrics-and-evaluation.md`
 - `docs/syllabus-self-paced.md`
@@ -138,15 +139,15 @@ Important caveat:
 | `20-policy-hardening` | Preview-ready | Hands-on/local | Harden OPA guardrails, run pass/fail fixtures, and write remediation guidance |
 | `21-incident-recovery` | Preview-ready | Concept/local | Drift, lock, state, import, and incident report recovery drills |
 | `22-capstone` | Preview-ready | Capstone | Final architecture, governance, CI, promotion, and recovery deliverables |
-| `23`-`25` | Planned | Not implemented | Azure service extension labs; require more `miniblue` validation |
+| `23`-`25` | Planned | Not implemented | Azure service extension labs; Function App, queue, and Event Grid topic probes complete; end-to-end Event Grid delivery still needs validation |
 
 ## Recommended next build order
 
-1. Revalidate `miniblue` support before implementing Azure service labs `23`-`25`
-2. Add instructor-led materials after the self-paced preview stabilizes
-3. Revisit a fully local `backend "azurerm"` path if `miniblue` adds backend-compatible endpoint support
-4. Consider adding optional CI policy checks after learners have completed Lab `16`
-5. Expand real-Azure appendices for teams ready to leave local emulation
+1. Draft Lab `23` as a concept/CLI-first Function App lab using the validated `azlocal functionapp create/list` path
+2. Draft Lab `24` as a concept-first Entra/Auth lab because local AD/identity commands are not exposed by `miniblue`
+3. Draft Lab `25` around Terraform-validated Event Grid topic creation, then keep event subscription and delivery as a validation checkpoint
+4. Add instructor-led materials after the self-paced preview stabilizes
+5. Revisit a fully local `backend "azurerm"` path if `miniblue` adds backend-compatible endpoint support
 
 ## Preview smoke check
 

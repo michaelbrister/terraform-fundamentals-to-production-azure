@@ -135,3 +135,8 @@ Reusable local validation configs live under:
 - `validation/miniblue/provider-smoke`
 - `validation/miniblue/backend-bootstrap`
 - `validation/miniblue/backend-consumer`
+- `validation/miniblue/services/eventgrid-topic`
+
+Service-extension validation is tracked in:
+
+- `docs/miniblue-service-validation.md`
