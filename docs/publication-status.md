@@ -101,6 +101,7 @@ Reason:
 ## Publication support now in place
 
 - Learner-facing lab status matrix in the top-level `README.md`.
+- Manual learner walkthrough checklist in `docs/learner-walkthrough-checklist.md`.
 - Self-paced preview syllabus in `docs/syllabus-self-paced.md`.
 - Azure-aware Terraform glossary in `docs/glossary.md`.
 - Associate-style objective mapping in `docs/associate-objective-mapping.md`.
@@ -114,8 +115,7 @@ Reason:
 - [x] Confirm GitHub Actions CI passes on the preview branch.
 - [x] Run `00-bootstrap` on a clean machine.
 - [x] Run `bash scripts/preview-smoke.sh --apply-miniblue`.
-- [ ] Run `terraform console` examples in Lab `08` as a learner walkthrough.
-- [ ] Run selected Lab `09` and Lab `10` scenarios as learner walkthroughs.
+- [ ] Complete `docs/learner-walkthrough-checklist.md`.
 - [x] Run default `go test` for Lab `11`.
 - [ ] Optionally run `RUN_MINIBLUE_TESTS=1 go test -v -timeout 25m`.
 - [x] Apply/destroy Lab `13`.

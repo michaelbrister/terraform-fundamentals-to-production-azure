@@ -97,6 +97,7 @@ This scaffold intentionally mirrors the existing repository layout:
 - `docs/course-progression-checklist.md`
 - `docs/glossary.md`
 - `docs/implementation-notes.md`
+- `docs/learner-walkthrough-checklist.md`
 - `docs/miniblue-validation.md`
 - `docs/miniblue-service-validation.md`
 - `docs/publication-status.md`
