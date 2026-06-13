@@ -1,11 +1,12 @@
 # Azure Edition Implementation Notes
 
-## Assumptions used for this first scaffold
+## Current course assumptions
 
-1. We are planning a parallel course, not rewriting the existing AWS folder in place.
+1. We are building a parallel course, not rewriting the existing AWS folder in place.
 2. The Azure edition should preserve the learning sequence of the AWS course as closely as possible.
-3. The first deliverable is structure and curriculum planning, not complete Terraform lab implementation.
-4. The Azure edition should target `miniblue` first so learners do not need Azure accounts unnecessarily.
+3. The preview course now covers `00-bootstrap` through `25-event-grid-to-function`.
+4. The Azure edition targets `miniblue` first so learners do not need Azure accounts unnecessarily.
+5. Labs should clearly identify whether they are hands-on, concept-first, CLI-first, or mixed.
 
 ## Design decisions
 
@@ -25,58 +26,56 @@ Most of the course is about Terraform, not AWS. Only the backend and service-spe
 
 Terraform Cloud, CI, approvals, OPA, and policy-as-code are still relevant in Azure-focused training. Those labs should stay conceptually intact.
 
-## Areas that need a decision before writing labs
+## Decisions and boundaries
 
 ### Authentication model
 
-We should choose one primary local auth story for the course:
+The primary local auth story is:
 
-- direct Terraform configuration against `miniblue`
-- `azlocal` or Azure CLI custom-cloud usage where needed
-- a later appendix for real Azure auth (`az login`, service principal, or OIDC)
-
-My recommendation:
-
-- teach `miniblue` first for local labs
-- introduce real Azure auth later only as an optional extension
+- direct Terraform configuration against `miniblue` for validated provider paths
+- `azlocal` for validated local control-plane probes where Terraform is not proven
+- concept-first real Azure auth guidance for Entra, service principals, managed identities, and OIDC
 
 ### Backend naming and isolation
 
-We should decide whether all learners share one local backend naming pattern or each learner creates an isolated backend stack inside the emulator.
+Live validation showed that `miniblue` can create some storage-account control-plane resources, but Terraform backend access still fails when it resolves the standard `blob.core.windows.net` endpoint.
 
-My recommendation:
+Current decision:
 
-- each learner gets an isolated backend resource group and storage account naming prefix
-- live validation showed that `miniblue` can create storage accounts via ARM, but Terraform backend access still fails when it resolves the standard `blob.core.windows.net` endpoint
-- treat Labs `05` and `06` as a separate decision, not part of the proven local-first path
+- Labs `05` and `06` are concept-first.
+- Do not promise a fully local `backend "azurerm"` path until endpoint compatibility is proven.
+- Keep backend examples aligned with the real Azure mental model while naming the local limitation.
 
 ### Emulator support boundary
 
-The main risk now is not Terraform design, but feature support in the emulator.
+The main risk is not Terraform design, but feature support in the emulator.
 
-My recommendation:
+Current boundary:
 
-- verify `miniblue` coverage for the specific resources we want to teach before writing advanced labs
-- keep Labs `23`-`25` flexible until we know which end-to-end flows are solid
-- keep early labs focused on resource groups, virtual networks, subnets, and NSGs, which validated successfully
-- avoid assuming `azurerm_key_vault` and `backend "azurerm"` are ready for local-first labs
+- Early hands-on labs use resource groups, virtual networks, subnets, and NSGs.
+- Lab `23` uses `azlocal` Function App control-plane validation, not Terraform Function App apply.
+- Lab `24` is concept-first because Entra app registration, service principal, managed identity, and RBAC flows are not locally exposed.
+- Lab `25` uses Terraform-validated Event Grid topic creation, but event subscription and Function delivery remain design-first.
+- Avoid assuming `azurerm_key_vault`, storage data-plane resources, and `backend "azurerm"` are ready for local-first labs.
 
 ### Capstone service family
 
 The capstone should avoid becoming an Azure product survey. It should use a small, repeatable set of services that exercise real Terraform skills.
 
-My recommendation:
+Current preview decision:
 
-- center the capstone on resource groups, storage, Key Vault, optional Service Bus, and optional Function App
+- center the capstone on the validated `modules/app_stack` pattern, environment promotion, policy, CI, ownership, and recovery
+- keep service-specific Function App, Entra, and Event Grid topics in Labs `23` through `25`
+- avoid making the capstone depend on storage data-plane, Key Vault, or backend flows that are not proven locally
 
 ## Suggested next implementation slice
 
-If we continue from this scaffold, the highest-value next step is:
+The highest-value next step is:
 
-1. write `00-bootstrap/README.md`
-2. build `01-local-basics` through `06-state-migration`
-3. define `modules/app_stack` for Azure
-4. create `live/dev`, `live/stage`, and `live/prod` examples
+1. run a learner walkthrough of selected hands-on labs
+2. add optional real-Azure appendices where local emulation is intentionally incomplete
+3. expand instructor-led materials after the self-paced preview stabilizes
+4. revisit `backend "azurerm"` if `miniblue` adds backend-compatible endpoint support
 
 ## Current decision for Labs 05 and 06
 

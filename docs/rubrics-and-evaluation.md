@@ -1,6 +1,6 @@
 # Rubrics And Evaluation
 
-Use these rubrics to decide whether a learner is ready to move from the preview foundation track into team, governance, and professional scenarios.
+Use these rubrics to decide whether a learner is ready to move through the Azure preview course from foundations into team, governance, professional, and service-extension scenarios.
 
 ## Preview-Ready Rubric
 
@@ -65,3 +65,15 @@ Pass means the learner can:
 - Describe team ownership boundaries.
 - Complete an incident recovery report.
 - State what would change before using real Azure.
+
+## Service Extension Rubric
+
+Pass means the learner can:
+
+- Explain why Lab `23` is concept/CLI-first instead of Terraform Function App apply-driven.
+- Design an HTTP API boundary with clear settings, secrets, outputs, and real-Azure notes.
+- Separate Entra authentication from application authorization in Lab `24`.
+- Identify human, CI, Terraform, runtime, and caller identities.
+- Run or interpret the Terraform-validated Event Grid topic root used by Lab `25`.
+- Explain why Event Grid subscription and Function delivery remain validation checkpoints.
+- Write an event contract that includes schema, idempotency, failure handling, and observability.

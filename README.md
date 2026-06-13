@@ -1,6 +1,6 @@
 # Terraform Fundamentals -> Production (Azure Edition)
 
-> A planned Azure-focused companion course that mirrors the existing AWS-oriented Terraform program.
+> An Azure-focused companion course that mirrors the existing AWS-oriented Terraform program.
 
 **Status:** Public preview
 **Created:** 2026-04-12
@@ -105,12 +105,12 @@ This scaffold intentionally mirrors the existing repository layout:
 
 ## Preview status
 
-The Azure edition now has a complete first Associate-style track from `00-bootstrap` through `13-state-subcommands`, plus preview-ready Team and Governance labs `14` through `16`.
+The Azure edition now has a complete preview track from `00-bootstrap` through `25-event-grid-to-function`.
 
 Important caveat:
 
 - Labs `05` and `06` are concept-first because the fully local `backend "azurerm"` path is not currently proven on `miniblue`.
-- Professional and Azure service extension tracks remain planned.
+- Labs `23` through `25` are preview-ready service-extension labs, but they intentionally preserve local emulator boundaries instead of pretending every Azure service path is fully emulated.
 
 ## Lab status matrix
 
