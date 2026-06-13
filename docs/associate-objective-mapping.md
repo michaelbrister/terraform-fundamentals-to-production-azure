@@ -87,6 +87,7 @@ Covered by:
 - `11-terratest`
 - `12-exam-drills`
 - `17-import-and-adopt`
+- `18-module-versioning-and-promotion`
 
 Learner should be able to:
 
@@ -95,6 +96,7 @@ Learner should be able to:
 - Explain drift and import-vs-recreate choices.
 - Read a test failure without panic spiraling into random edits.
 - Import existing infrastructure and converge configuration without recreation.
+- Explain safe module promotion and why production module consumers should pin releases.
 
 ## Team Workflow And Governance Concepts
 
