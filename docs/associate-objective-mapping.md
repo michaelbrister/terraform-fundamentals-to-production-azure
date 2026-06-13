@@ -91,6 +91,7 @@ Covered by:
 - `19-multi-team-boundaries`
 - `20-policy-hardening`
 - `21-incident-recovery`
+- `22-capstone`
 
 Learner should be able to:
 
@@ -103,6 +104,7 @@ Learner should be able to:
 - Explain state boundaries, output contracts, and ownership separation across teams.
 - Explain policy hardening, remediation guidance, and phased rollout.
 - Explain incident recovery steps for drift, locks, state inspection, and imports.
+- Present a complete Terraform workflow with architecture, governance, CI, promotion, and recovery evidence.
 
 ## Team Workflow And Governance Concepts
 

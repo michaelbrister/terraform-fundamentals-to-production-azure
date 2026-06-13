@@ -170,6 +170,7 @@ Labs:
 - `19-multi-team-boundaries`
 - `20-policy-hardening`
 - `21-incident-recovery`
+- `22-capstone`
 
 Outcomes:
 
@@ -182,6 +183,7 @@ Outcomes:
 - Design team ownership boundaries, output contracts, and state separation.
 - Harden policy checks and write actionable remediation guidance.
 - Practice incident recovery for drift, state inspection, import, and lock scenarios.
+- Complete a final capstone package tying architecture, governance, CI, promotion, and recovery together.
 
 Checkpoint:
 
@@ -190,6 +192,7 @@ Checkpoint:
 - Write an ownership matrix for platform, app, and security teams.
 - Run policy pass/fail fixtures and explain the rollout plan.
 - Complete an incident report and recovery checklist.
+- Submit the capstone checklist, architecture brief, and evaluation artifacts.
 
 ## Preview Completion Standard
 
@@ -197,7 +200,7 @@ A learner is preview-complete when they can:
 
 - Complete `00` through `04`, `07`, `08`, `09`, `10`, `12`, and `13`.
 - Complete concept/local governance Labs `14`, `15`, and `16`.
-- Complete professional Labs `17`, `18`, `19`, `20`, and `21`.
+- Complete professional Labs `17` through `22`.
 - Explain the backend limitations documented in `05` and `06`.
 - Run `go test -v -timeout 5m` in `11-terratest/test`.
 - Read the CI workflow and explain which failures are intentional.

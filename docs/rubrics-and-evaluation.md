@@ -53,3 +53,15 @@ The learner is ready for the next track when they can complete the preview labs 
 - How module boundaries help teams reuse infrastructure safely.
 - Why local emulation is useful and where it stops being the same as real Azure.
 
+## Capstone Rubric
+
+Pass means the learner can:
+
+- Explain the `modules/app_stack` contract.
+- Compare `live/dev`, `live/stage`, and `live/prod`.
+- Run or interpret the preview smoke checks.
+- Explain policy pass/fail results and remediation.
+- Describe a safe module promotion path.
+- Describe team ownership boundaries.
+- Complete an incident recovery report.
+- State what would change before using real Azure.
