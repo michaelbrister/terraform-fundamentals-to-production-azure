@@ -102,6 +102,7 @@ This scaffold intentionally mirrors the existing repository layout:
 - `docs/learner-walkthrough-checklist.md`
 - `docs/miniblue-validation.md`
 - `docs/miniblue-service-validation.md`
+- `docs/pilot-feedback.template.md`
 - `docs/publication-status.md`
 - `docs/real-azure-appendices.md`
 - `docs/rubrics-and-evaluation.md`

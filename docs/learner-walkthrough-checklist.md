@@ -4,6 +4,8 @@ Use this checklist for first-publication manual QA.
 
 The automated smoke script proves Terraform formatting, validation, intentional failures, policy fixtures, and the default test suite. This walkthrough proves the course feels coherent to a learner moving through the material.
 
+Record findings in `docs/pilot-feedback.template.md`.
+
 ## Recommended Pass Order
 
 Run these after a clean clone or fresh checkout:
@@ -172,6 +174,6 @@ The walkthrough passes when:
 
 ## Notes
 
-Use this section to record issues, confusing wording, or follow-up edits:
+Use this section for quick notes, then copy durable findings into `docs/pilot-feedback.template.md`:
 
-- 
+-

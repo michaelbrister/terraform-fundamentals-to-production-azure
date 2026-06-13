@@ -159,3 +159,5 @@ For a workshop completion check, ask each learner to submit:
 - one service-extension boundary explanation
 
 The goal is not memorizing commands. The goal is safe Terraform judgment.
+
+After the session, complete `docs/pilot-feedback.template.md` and convert follow-up actions into issues or small documentation patches.

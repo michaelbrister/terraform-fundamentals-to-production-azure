@@ -2,6 +2,8 @@
 
 Use this as a lightweight agenda template for instructor-led delivery.
 
+Record pilot results in `docs/pilot-feedback.template.md`.
+
 ## Workshop Metadata
 
 - Date:
@@ -66,6 +68,7 @@ Each learner should leave with:
 
 ## Follow-Up
 
+- [ ] Complete `docs/pilot-feedback.template.md`.
 - [ ] Record confusing lab wording.
 - [ ] Record setup issues.
 - [ ] Record miniblue behavior differences.
