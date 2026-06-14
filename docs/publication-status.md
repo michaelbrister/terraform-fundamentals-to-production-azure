@@ -105,6 +105,7 @@ Reason:
 - Instructor guide and agenda template in `docs/instructor-guide.md` and `docs/instructor-delivery-plan.md`.
 - Pilot feedback template in `docs/pilot-feedback.template.md`.
 - First maintainer dry-run feedback in `docs/pilot-feedback.dry-run-2026-06-13.md`.
+- Preview release notes in `docs/preview-release-notes.md`.
 - Self-paced preview syllabus in `docs/syllabus-self-paced.md`.
 - Real Azure appendix index in `docs/real-azure-appendices.md`.
 - Azure-aware Terraform glossary in `docs/glossary.md`.
